@@ -6,7 +6,7 @@ class CreateFeedbacks < ActiveRecord::Migration[7.1]
       t.integer :nps
       t.string :status
       t.references :branch, null: false, foreign_key: true
-      t.datetime :experiences_at
+      t.datetime :experienced_at
 
       t.timestamps
     end

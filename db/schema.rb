@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_12_123305) do
     t.integer "nps"
     t.string "status"
     t.integer "branch_id", null: false
-    t.datetime "experiences_at"
+    t.datetime "experienced_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["branch_id"], name: "index_feedbacks_on_branch_id"
