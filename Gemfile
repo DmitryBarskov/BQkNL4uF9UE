@@ -15,11 +15,11 @@ gem "sqlite3", "~> 1.4"
 gem "puma", ">= 5.0"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem "tzinfo-data", platforms: %i[windows jruby]
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ]
+  gem "debug", platforms: %i[mri windows]
 end
 
 group :development do
@@ -27,3 +27,12 @@ group :development do
   # gem "spring"
 end
 
+gem "rubocop", "~> 1.59"
+
+gem "rubocop-rails", "~> 2.23"
+
+gem "rubocop-performance", "~> 1.20"
+
+gem "rubocop-rake", "~> 0.6.0"
+
+gem "rubocop-thread_safety", "~> 0.5.1"
