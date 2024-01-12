@@ -10,13 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_12_123134) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_12_123305) do
   create_table "branches", force: :cascade do |t|
     t.string "name"
     t.integer "organization_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["organization_id"], name: "index_branches_on_organization_id"
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.integer "quality"
+    t.string "age_group"
+    t.integer "nps"
+    t.string "status"
+    t.integer "branch_id", null: false
+    t.datetime "experiences_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["branch_id"], name: "index_feedbacks_on_branch_id"
   end
 
   create_table "organizations", force: :cascade do |t|
@@ -26,4 +38,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_12_123134) do
   end
 
   add_foreign_key "branches", "organizations"
+  add_foreign_key "feedbacks", "branches"
 end
