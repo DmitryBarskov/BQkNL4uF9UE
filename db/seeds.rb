@@ -22,7 +22,7 @@ from = Date.new(2010, 1, 1)
 to = Date.new(2018, 5, 1)
 
 10_000.times do
-  quality = rand(1..10)
+  quality = rand(1..5)
   age_group = %w[01-19 20-29 30-39 40-49 50-59 60+].sample
   nps = rand(0..10)
   status = %w[valid cancelled].sample

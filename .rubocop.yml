@@ -25,6 +25,9 @@ Layout/MultilineMethodCallIndentation:
 Style/Documentation:
   Enabled: false
 
+Style/EmptyMethod:
+  Enabled: false
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 

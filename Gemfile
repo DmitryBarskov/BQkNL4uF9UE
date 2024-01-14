@@ -25,14 +25,12 @@ end
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem "rubocop", "~> 1.59", require: false
+  gem "rubocop-performance", "~> 1.20", require: false
+  gem "rubocop-rails", "~> 2.23", require: false
+  gem "rubocop-rake", "~> 0.6.0", require: false
+  gem "rubocop-thread_safety", "~> 0.5.1", require: false
+
+  gem "ruby-lsp", require: false
+  gem "ruby-lsp-rails"
 end
-
-gem "rubocop", "~> 1.59"
-
-gem "rubocop-rails", "~> 2.23"
-
-gem "rubocop-performance", "~> 1.20"
-
-gem "rubocop-rake", "~> 0.6.0"
-
-gem "rubocop-thread_safety", "~> 0.5.1"
