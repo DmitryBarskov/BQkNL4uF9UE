@@ -1,0 +1,8 @@
+<section>
+  <% @tasks.each do |task_no, locals| %>
+    <article>
+      <h2>Task <%= task_no %></h2>
+      <%= render partial: "task_#{task_no}", locals: locals %>
+    </article>
+  <% end %>
+</section>

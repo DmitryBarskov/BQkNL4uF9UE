@@ -1,0 +1,26 @@
+<h3>Cross Table Age Group / Quality (Douglas)</h3>
+<style>
+  table, thead, tbody, tr, th, td {
+    border: solid black 1px;
+  }
+</style>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <% columns.each do |col| %>
+        <th><%= col %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <% rows.each do |row| %>
+      <tr>
+        <th><%= row %></th>
+        <% columns.each do |col| %>
+          <td><%= table[row][col] %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

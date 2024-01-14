@@ -1,0 +1,7 @@
+<ol>
+  <h3>Top branches of BMW</h3>
+
+  <% list.each do |branch| %>
+    <li><%= branch.name %> - <%= format('%.2f', branch.score) %></li>
+  <% end %>
+</ol>

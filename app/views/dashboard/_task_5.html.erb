@@ -1,0 +1,22 @@
+<h3>NPS</h3>
+<style>
+  table, thead, tbody, tr, th, td {
+    border: solid black 1px;
+  }
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>Organization</th>
+      <th>NPS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% list.each do |org| %>
+      <tr>
+        <td><%= org["name"] %></td>
+        <td><%= format("%.3f", org["nps"]) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

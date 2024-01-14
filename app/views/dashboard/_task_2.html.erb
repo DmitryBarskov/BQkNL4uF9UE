@@ -1,0 +1,24 @@
+<h3>Quality frequency distribution (FitX)</h3>
+<style>
+  table, thead, tbody, tr, th, td {
+    border: solid black 1px;
+  }
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>quality</th>
+      <% distribution.keys.each do |quality| %>
+        <th><%= quality %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>total</td>
+      <% distribution.values.each do |count| %>
+        <td><%= count %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
