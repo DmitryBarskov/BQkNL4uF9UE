@@ -54,7 +54,7 @@ class DashboardController < ApplicationController
         <<~SQL.squish
           organizations.id,
           organizations.name AS name,
-          (SUM(case when nps <= 6 then 1 else 0 end) - SUM(case when nps >= 9 then 1 else 0 end)) / CAST(COUNT(1) AS FLOAT) AS nps
+          (COUNT(1) FILTER (WHERE nps >= 9) - COUNT(1) FILTER (WHERE nps <= 6))  * 100.0 / COUNT(1) AS nps
         SQL
       )
     { list: list.map(&:attributes) }
